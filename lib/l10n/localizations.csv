@@ -1,0 +1,17 @@
+key,vi,en
+todo,Việc cần làm,Todo
+neww,Mới,New
+inProgress,Đang thực hiện,In progress
+completed,Hoàn thành,Completed
+addTodo,Thêm công việc,Add Todo
+removeTodo,Xóa công việc,Remove Todo
+updateTodo,Cập nhật công việc,Update Todo
+search,Tìm kiếm,Search
+title,Tiêu đề,Title
+description,Chi tiết,Description
+selectDate,Chọn ngày,Select date
+selectTime,Chọn thời gian,Select time
+all,Tất cả,All
+today,Hôm nay,Today
+upcoming,Sắp tới,Upcoming
+expired,Hết hạn,Expired

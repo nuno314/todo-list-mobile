@@ -1,0 +1,18 @@
+{
+  "todo": "Việc cần làm",
+  "neww": "Mới",
+  "inProgress": "Đang thực hiện",
+  "completed": "Hoàn thành",
+  "addTodo": "Thêm công việc",
+  "removeTodo": "Xóa công việc",
+  "updateTodo": "Cập nhật công việc",
+  "search": "Tìm kiếm",
+  "title": "Tiêu đề",
+  "description": "Chi tiết",
+  "selectDate": "Chọn ngày",
+  "selectTime": "Chọn thời gian",
+  "all": "Tất cả",
+  "today": "Hôm nay",
+  "upcoming": "Sắp tới",
+  "expired": "Hết hạn"
+}
