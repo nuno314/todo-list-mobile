@@ -31,15 +31,12 @@ AppTheme buildLightTheme() {
       // fontFamily: 'Inter',
       primaryColorLight: themeColor.primaryColorLight,
       primaryColor: Colors.white,
-      backgroundColor: Colors.white,
       scaffoldBackgroundColor: themeColor.cardBackground,
       cardColor: themeColor.cardBackground,
       textTheme: AppTextTheme.getDefaultTextTheme(),
-      colorScheme: ColorScheme.fromSwatch().copyWith(
+      unselectedWidgetColor: Colors.grey, colorScheme: ColorScheme.fromSwatch().copyWith(
         primary: themeColor.primaryColor,
-      ),
-      unselectedWidgetColor: Colors.grey,
-      selectedRowColor: themeColor.primaryColor,
+      ).copyWith(background: Colors.white),
     ),
   );
 }
@@ -59,7 +56,6 @@ AppTheme buildDarkTheme() {
         primary: themeColor.primaryColor,
       ),
       unselectedWidgetColor: Colors.grey,
-      selectedRowColor: themeColor.primaryColor,
     ),
   );
 }

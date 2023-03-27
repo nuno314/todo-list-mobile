@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:todo_list/data/models/todo.dart';
-import 'package:todo_list/presentation/extentions/component_extention.dart';
 import 'package:todo_list/theme/theme_color.dart';
 import '../../../../../common/utils/date_utils.dart';
 
@@ -40,13 +38,13 @@ class _AddTodoFormState extends State<AddTodoForm> {
             RichText(
               text: TextSpan(
                 text: widget.trans.title,
-                style: widget.textTheme.bodyText1?.copyWith(
+                style: widget.textTheme.bodyLarge?.copyWith(
                   fontSize: 16,
                 ),
                 children: [
                   TextSpan(
                     text: ' *',
-                    style: widget.textTheme.bodyText1?.copyWith(
+                    style: widget.textTheme.bodyLarge?.copyWith(
                       color: Colors.red,
                     ),
                   ),
@@ -59,7 +57,7 @@ class _AddTodoFormState extends State<AddTodoForm> {
             ValueListenableBuilder(
               valueListenable: _titleValidation,
               builder: (context, value, child) => TextField(
-                style: widget.textTheme.bodyText2?.copyWith(
+                style: widget.textTheme.bodyMedium?.copyWith(
                   fontSize: 16,
                 ),
                 onChanged: (value) {
@@ -114,7 +112,7 @@ class _AddTodoFormState extends State<AddTodoForm> {
             ),
             Text(
               widget.trans.description,
-              style: widget.textTheme.bodyText1?.copyWith(
+              style: widget.textTheme.bodyLarge?.copyWith(
                 fontSize: 16,
               ),
             ),
@@ -145,7 +143,7 @@ class _AddTodoFormState extends State<AddTodoForm> {
             ),
             Text(
               widget.trans.selectTime,
-              style: widget.textTheme.bodyText1?.copyWith(
+              style: widget.textTheme.bodyLarge?.copyWith(
                 fontSize: 16,
               ),
             ),
@@ -178,7 +176,7 @@ class _AddTodoFormState extends State<AddTodoForm> {
                           borderRadius: BorderRadius.circular(8),
                         ),
                         alignLabelWithHint: true,
-                        hintStyle: widget.textTheme.bodyText2?.copyWith(
+                        hintStyle: widget.textTheme.bodyMedium?.copyWith(
                           color: themeColor.gray8C,
                           fontSize: 16,
                         ),
@@ -212,7 +210,7 @@ class _AddTodoFormState extends State<AddTodoForm> {
                           borderRadius: BorderRadius.circular(8),
                         ),
                         alignLabelWithHint: true,
-                        hintStyle: widget.textTheme.bodyText2?.copyWith(
+                        hintStyle: widget.textTheme.bodyMedium?.copyWith(
                           color: themeColor.gray8C,
                           fontSize: 16,
                         ),
@@ -239,7 +237,7 @@ class _AddTodoFormState extends State<AddTodoForm> {
                 ),
                 child: Text(
                   widget.trans.addTodo,
-                  style: widget.textTheme.bodyText1?.copyWith(
+                  style: widget.textTheme.bodyLarge?.copyWith(
                     fontSize: 16,
                     color: themeColor.white,
                   ),

@@ -1,6 +1,6 @@
 part of 'splash_screen.dart';
 
-extension SplashAction on _SplashScreenState {
+extension SplashAction on SplashScreenState {
   void initial() async {
     bloc.add(SplashInitialEvent());
   }

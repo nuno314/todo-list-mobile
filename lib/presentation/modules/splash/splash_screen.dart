@@ -4,10 +4,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:todo_list/presentation/modules/splash/bloc/splash_bloc.dart';
 import 'package:todo_list/presentation/route/route_list.dart';
 import 'package:todo_list/theme/theme_color.dart';
-import 'package:timezone/data/latest.dart' as tz;
-
-
-import '../../../di/di.dart';
 
 part 'splash_action.dart';
 
@@ -15,10 +11,10 @@ class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
 
   @override
-  State<SplashScreen> createState() => _SplashScreenState();
+  State<SplashScreen> createState() => SplashScreenState();
 }
 
-class _SplashScreenState extends State<SplashScreen> {
+class SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     initial();
@@ -33,7 +29,7 @@ class _SplashScreenState extends State<SplashScreen> {
       backgroundColor: themeColor.primaryColor,
       body: BlocListener<SplashBloc, SplashState>(
         listener: _blocListener,
-        child: Text('19120682'),
+        child: const Text('19120682'),
       ),
     );
   }

@@ -1,10 +1,8 @@
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
 
 import '../common_widget/unsupported_page.dart';
 import '../modules/main/main_route.dart';
 import '../modules/splash/splash_route.dart';
-import 'route_list.dart';
 
 class RouteGenerator {
   static Map<String, WidgetBuilder> _getAll(RouteSettings settings) => {

@@ -66,7 +66,7 @@ extension DeadlineEtx on Todo {
     final isToday = deadlineStatus == DeadlineStatus.today ? true : false;
     return Text(
       deadlineStatus.localized(trans),
-      style: textTheme.bodyText1?.copyWith(
+      style: textTheme.bodyLarge?.copyWith(
         color: isToday ? themeColor.red : Colors.orange,
         fontSize: 14,
       ),

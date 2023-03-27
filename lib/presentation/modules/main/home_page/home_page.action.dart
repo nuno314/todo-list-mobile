@@ -1,6 +1,6 @@
 part of 'home_page_screen.dart';
 
-extension HomePageAction on _HomePageScreenState {
+extension HomePageAction on HomePageScreenState {
   void initial() {
     bloc.add(HomePageInitialEvent());
   }

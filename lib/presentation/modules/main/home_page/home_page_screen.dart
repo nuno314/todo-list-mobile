@@ -20,10 +20,10 @@ class HomePageScreen extends StatefulWidget {
   const HomePageScreen({super.key});
 
   @override
-  State<HomePageScreen> createState() => _HomePageScreenState();
+  State<HomePageScreen> createState() => HomePageScreenState();
 }
 
-class _HomePageScreenState extends State<HomePageScreen> {
+class HomePageScreenState extends State<HomePageScreen> {
   late Debouncer<String> debouncer = Debouncer<String>(
     const Duration(milliseconds: 500),
     onSearchTodo,
@@ -48,7 +48,7 @@ class _HomePageScreenState extends State<HomePageScreen> {
   void listenNotification() =>
       NotificationApi.onNotifications.stream.listen(onClickedNotification);
 
-  void onClickedNotification(NotificationResponse? payload) => print(payload);
+  void onClickedNotification(NotificationResponse? payload) {}
 
   @override
   Widget build(BuildContext context) {
@@ -68,7 +68,7 @@ class _HomePageScreenState extends State<HomePageScreen> {
           backgroundColor: themeColor.primaryColor,
           title: Text(
             'Todo List',
-            style: textTheme.bodyText1?.copyWith(
+            style: textTheme.bodyLarge?.copyWith(
               color: themeColor.white,
               fontSize: 20,
             ),
@@ -164,7 +164,7 @@ class _HomePageScreenState extends State<HomePageScreen> {
         ),
         child: Text(
           trans.addTodo,
-          style: textTheme.bodyText1?.copyWith(
+          style: textTheme.bodyLarge?.copyWith(
             color: themeColor.white,
             fontSize: 16,
           ),

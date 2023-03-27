@@ -63,7 +63,7 @@ class TodoItem extends StatelessWidget {
                     children: [
                       Text(
                         todo?.title ?? '--',
-                        style: textTheme.bodyText1?.copyWith(
+                        style: textTheme.bodyLarge?.copyWith(
                           color: themeColor.white,
                           fontSize: 12,
                         ),
@@ -85,7 +85,7 @@ class TodoItem extends StatelessWidget {
                         ),
                         child: Text(
                           todo?.status?.localized(trans) ?? trans.newTodo,
-                          style: textTheme.bodyText1?.copyWith(
+                          style: textTheme.bodyLarge?.copyWith(
                             color: todo?.status?.color,
                             fontSize: 12,
                           ),
@@ -115,7 +115,7 @@ class TodoItem extends StatelessWidget {
                 Expanded(
                   child: Text(
                     todo?.description ?? '--',
-                    style: textTheme.bodyText2?.copyWith(
+                    style: textTheme.bodyMedium?.copyWith(
                       fontSize: 10,
                     ),
                     maxLines: 2,
@@ -142,7 +142,7 @@ class TodoItem extends StatelessWidget {
                 children: [
                   Text(
                     todo?.deadline?.toFullDateFormat(context) ?? '--',
-                    style: textTheme.bodyText1?.copyWith(
+                    style: textTheme.bodyLarge?.copyWith(
                       fontSize: 12,
                     ),
                   ),

@@ -12,7 +12,10 @@ part 'home_page_event.dart';
 part 'home_page_state.dart';
 
 class HomePageBloc extends Bloc<HomePageEvent, HomePageState> {
-  HomePageBloc() : super(HomePageInitialState()) {
+  late final SharedPreferences _sharedPref;
+
+  HomePageBloc({required SharedPreferences prefs})
+      : super(HomePageInitialState()) {
     on<HomePageInitialEvent>(initial);
     on<AddTodoEvent>(addTodo);
     on<RemoveTodoEvent>(removeTodo);
@@ -20,16 +23,14 @@ class HomePageBloc extends Bloc<HomePageEvent, HomePageState> {
     on<SearchTodoEvent>(searchTodo);
     on<FilterTodoEvent>(filterTodo);
     add(HomePageInitialEvent());
+    _sharedPref = prefs;
   }
-
-  final _sharedPref = injector.get<SharedPreferences>();
 
   FutureOr<void> initial(
     HomePageInitialEvent event,
     Emitter<HomePageState> emit,
   ) async {
     final todos = getTodoListFromPref();
-    print(todos.first.title);
     emit(
       state.copyWith(
         viewModel: state.viewModel.copyWith(todos: todos),
@@ -74,7 +75,6 @@ class HomePageBloc extends Bloc<HomePageEvent, HomePageState> {
   FutureOr<void> searchTodo(
       SearchTodoEvent event, Emitter<HomePageState> emit) {
     final todos = getTodoListFromPref();
-    print(todos.first.title?.toLowerCase());
     final newList = todos
         .where((element) =>
             element.title
